@@ -28,10 +28,11 @@ public class MySQLConnUtils {
     //これにより DriverManager が MySQL接続用のドライバを認識可能になる
     Class.forName("com.mysql.jdbc.Driver");
 
-    // URL Connection for MySQL
-    // Example: jdbc:mysql://localhost:3306/simplehr
+    //jdbc:mysql:/というJDBC用の接続スキーム
+    //例：jdbc:mysql:localhost:3306/testdb
+    ///DriverManager.getConnection() により、実際のMySQLサーバへの接続を確立
+    //Connection オブジェクトを返して終了
     String connectionURL = "jdbc:mysql://" + hostName + "/" + dbName;
-
     Connection conn = DriverManager.getConnection(connectionURL, userName,
                       password);
     return conn;
