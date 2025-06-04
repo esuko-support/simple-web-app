@@ -14,6 +14,7 @@ package com.lanihuang.simplewebapp.servlet;このファイルの論理的な所�
        - Java では同じクラス名が複数あってもパッケージで分けていれば区別できるため、一意性を確保するためにドメイン名を反転させて使います。例：com.google.api.Calenda
         - Javaの標準文化としてこの構造。com. などは 名前空間の慣習的な命名規則
          - 以下のように package 名は物理的なフォルダ構造にも一致するように設計されます（Javaの規約）
+
 src/
 └── com/
     └── lanihuang/
