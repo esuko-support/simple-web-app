@@ -13,12 +13,12 @@
 - HTTPリクエスト（主にWebブラウザから）を受け取って処理する Javaのサーバーサイドコンポーネント。
 - Webアプリケーションにおける コントローラーの役割 を持ちます（MVCモデルで言う「C」）。
 
-<details>
-<summary>補足：Servletとは？</summary>
+## なぜServletが「最初に呼ばれる」のか？
+- WebアプリケーションにはリクエストURLとServletのマッピング設定が存在します。
+  - @WebServlet(urlPatterns = {"/createProduct"}) のように指定されている。
+   - ブラウザから http://.../createProduct にアクセスがあると、Tomcat等のWebサーバーがそのリクエストを該当のServletに転送します。
+    - そのServletの doGet() や doPost() メソッドが呼ばれ、処理が始まります。
 
-JavaのWebアプリにおいて、リクエストを受け取り、処理を振り分けるためのサーバーサイドコンポーネント。
-
-</details>
 
 ## MVCモデル
 - M	Model（モデル）	データやビジネスロジックの処理（データの定義・計算・DB操作など）
