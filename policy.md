@@ -14,10 +14,10 @@
 - Webアプリケーションにおける コントローラーの役割 を持ちます（MVCモデルで言う「C」）。
 
 ## なぜServletが「最初に呼ばれる」のか？
-- WebアプリケーションにはリクエストURLとServletのマッピング設定が存在します。
-  - @WebServlet(urlPatterns = {"/createProduct"}) のように指定されている。
-  - ブラウザから http://.../createProduct にアクセスがあると、Tomcat等のWebサーバーがそのリクエストを該当のServletに転送します。
-  - そのServletの doGet() や doPost() メソッドが呼ばれ、処理が始まります。
+WebアプリケーションにはリクエストURLとServletのマッピング設定が存在します。
+- @WebServlet(urlPatterns = {"/createProduct"}) のように指定されている。
+- ブラウザから http://.../createProduct にアクセスがあると、Tomcat等のWebサーバーがそのリクエストを該当のServletに転送します。
+- そのServletの doGet() や doPost() メソッドが呼ばれ、処理が始まります。
 
 servlet/ フォルダには ユーザーの行動（ログイン、登録、編集など）ごとの入口処理 がまとまっています。
 - Servletはユーザー操作の「受け口」です。ここから他のユーティリティやデータベース処理に指示を出す構造です。
