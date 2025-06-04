@@ -8,6 +8,7 @@
 - 📤 処理結果	成功 → 商品一覧画面へリダイレクト／失敗 → 登録画面へ戻る（エラーメッセージ付き
 
 ## syntax
+1 入力値の取得
 <pre>
 String code = (String) request.getParameter("code");
 String name = (String) request.getParameter("name");
