@@ -27,6 +27,13 @@ RequestDispatcher dispatcher = request.getServletContext()
       .getRequestDispatcher("/WEB-INF/views/createProductView.jsp");
 dispatcher.forward(request, response);
 </pre>
-
 - /WEB-INF/views/createProductView.jsp を表示する
 - forward()：サーバー内で画面を切り替える（リダイレクトではない）
+
+<pre>
+protected void doPost(...) {
+  doGet(request, response);
+}
+</pre>
+- POSTで来た場合もGETと同じ画面を表示（表示専用サーブレットなので、POSTも画面表示だけ）
+
