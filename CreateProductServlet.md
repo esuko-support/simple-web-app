@@ -11,7 +11,25 @@ package com.lanihuang.simplewebapp.servlet;このファイルの論理的な所�
     - Java において package は：同じ目的・機能に属するクラスやインターフェースをまとめるための**名前空間（namespace）**の仕組み
      - package com.lanihuang.simplewebapp.servlet;という宣言は、このクラスは com.lanihuang.simplewebapp.servlet というパッケージに属する
       - com.lanihuang.simplewebapp.servlet これはドメイン名を反転させた形式（リバースドメイン）で慣習的に構成されます。
-       - Java では同じクラス名が複数あってもパッケージで分けていれば区別できるため、一意性を確保するためにドメイン名を反転させて使います
+       - Java では同じクラス名が複数あってもパッケージで分けていれば区別できるため、一意性を確保するためにドメイン名を反転させて使います。例：com.google.api.Calenda
+        - Javaの標準文化としてこの構造。com. などは 名前空間の慣習的な命名規則
+         - 以下のように package 名は物理的なフォルダ構造にも一致するように設計されます（Javaの規約）
+src/
+└── com/
+    └── lanihuang/
+        └── simplewebapp/
+            └── servlet/
+                └── HomeServlet.java
+
+##　サマリー
+- package	-> Javaの名前空間。クラスの整理・分類に使用
+- com.lanihuang.simplewebapp.servlet -> 作成者名＋アプリ名＋役割の階層構造
+- com. だからWeb上にある？ -> × 関係なし。命名の慣習にすぎない
+- なぜこうする？ -> クラス名の重複を避け、構造的に整理できるため
+
+
+
+
 - servlet は MVCモデルでいう「C（Controller）」層をまとめる場所
 - src/com/lanihuang/simplewebapp/servlet/ はパッケージに対応するディレクトリ構造
 
