@@ -16,10 +16,15 @@ package com.lanihuang.simplewebapp.servlet;このファイルの論理的な所�
          - 以下のように package 名は物理的なフォルダ構造にも一致するように設計されます（Javaの規約）
 
 src/
+
 └── com/
+
     └── lanihuang/
+    
         └── simplewebapp/
+        
             └── servlet/
+            
                 └── HomeServlet.java
 
 ##　サマリー
