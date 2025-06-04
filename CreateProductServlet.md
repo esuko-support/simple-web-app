@@ -16,7 +16,9 @@ public class CreateProductServlet extends HttpServlet
 - Javaの HttpServlet を継承し、HTTPリクエストを処理できるようにする
 - HttpServlet は Java EE（Jakarta EE）における 標準的なサーブレットの親クラス
 
+<pre>
 protected void doGet(HttpServletRequest request, HttpServletResponse response)
+</pre>
 - HTTPの「GET」リクエストに応答する処理
 - RequestDispatcher を使って、画面（JSP）に処理を転送
 
