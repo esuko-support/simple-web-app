@@ -17,21 +17,15 @@
 
 ## 例外処理／セキュリティ	try-catch, rollback, web.xml制御	安定性と安全性の仕組み
 
-##Servletとは？
+## Servletとは？
+- javax.servlet.http.HttpServlet を継承するクラス。
+- HTTPリクエスト（主にWebブラウザから）を受け取って処理する Javaのサーバーサイドコンポーネント。
+- Webアプリケーションにおける コントローラーの役割 を持ちます（MVCモデルで言う「C」）。
 
--javax.servlet.http.HttpServlet を継承するクラス。
-
--HTTPリクエスト（主にWebブラウザから）を受け取って処理する Javaのサーバーサイドコンポーネント。
-
--Webアプリケーションにおける コントローラーの役割 を持ちます（MVCモデルで言う「C」）。
-
-##MVCモデル
-
--M	Model（モデル）	データやビジネスロジックの処理（データの定義・計算・DB操作など）
-
--V	View（ビュー）	ユーザーに見せる画面・出力（HTMLやJSPなど）
-
--C	Controller（コントローラー）	ユーザーの入力を受け取り、ModelやViewと連携して処理の指示を出す
+## MVCモデル
+- M	Model（モデル）	データやビジネスロジックの処理（データの定義・計算・DB操作など）
+- V	View（ビュー）	ユーザーに見せる画面・出力（HTMLやJSPなど）
+- C	Controller（コントローラー）	ユーザーの入力を受け取り、ModelやViewと連携して処理の指示を出す
 
 
 [ユーザー操作]
