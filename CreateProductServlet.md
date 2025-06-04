@@ -6,6 +6,12 @@
 
 ## syntax
 package com.lanihuang.simplewebapp.servlet;このファイルの論理的な所属先（Javaの名前空間）
+- package com.lanihuang.simplewebapp.servlet; に含まれる「論理的な所属先（Javaの名前空間）」とは、**Javaでのクラス整理・管理のための論理的な階層（≒フォルダ構造）**のことを指しています
+  - そもそも package とは
+    -Java において package は：同じ目的・機能に属するクラスやインターフェースをまとめるための**名前空間（namespace）**の仕組み
+     -package com.lanihuang.simplewebapp.servlet;という宣言は、このクラスは com.lanihuang.simplewebapp.servlet というパッケージに属する
+      -com.lanihuang.simplewebapp.servlet これはドメイン名を反転させた形式（リバースドメイン）で慣習的に構成されます。
+       -Java では同じクラス名が複数あってもパッケージで分けていれば区別できるため、一意性を確保するためにドメイン名を反転させて使います
 - servlet は MVCモデルでいう「C（Controller）」層をまとめる場所
 - src/com/lanihuang/simplewebapp/servlet/ はパッケージに対応するディレクトリ構造
 
