@@ -6,7 +6,6 @@
 
 ## syntax
 
-package com.lanihuang.simplewebapp.servlet;
-- このファイルの論理的な所属先（Javaの名前空間）
+- package com.lanihuang.simplewebapp.servlet;このファイルの論理的な所属先（Javaの名前空間）
 - servlet は MVCモデルでいう「C（Controller）」層をまとめる場所
 - src/com/lanihuang/simplewebapp/servlet/ はパッケージに対応するディレクトリ構造
