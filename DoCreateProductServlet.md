@@ -6,3 +6,9 @@
 - 📥 URLパス	/doCreateProduct
 - 🔁 ビジネスロジック	DBUtils.insertProduct() を呼び出して登録処理
 - 📤 処理結果	成功 → 商品一覧画面へリダイレクト／失敗 → 登録画面へ戻る（エラーメッセージ付き
+
+<pre>
+String code = (String) request.getParameter("code");
+String name = (String) request.getParameter("name");
+String priceStr = (String) request.getParameter("price");
+<pre/>
