@@ -16,9 +16,16 @@
 ## なぜServletが「最初に呼ばれる」のか？
 - WebアプリケーションにはリクエストURLとServletのマッピング設定が存在します。
   - @WebServlet(urlPatterns = {"/createProduct"}) のように指定されている。
-   - ブラウザから http://.../createProduct にアクセスがあると、Tomcat等のWebサーバーがそのリクエストを該当のServletに転送します。
-    - そのServletの doGet() や doPost() メソッドが呼ばれ、処理が始まります。
+  - ブラウザから http://.../createProduct にアクセスがあると、Tomcat等のWebサーバーがそのリクエストを該当のServletに転送します。
+  - そのServletの doGet() や doPost() メソッドが呼ばれ、処理が始まります。
 
+servlet/ フォルダには ユーザーの行動（ログイン、登録、編集など）ごとの入口処理 がまとまっています。
+- Servletはユーザー操作の「受け口」です。ここから他のユーティリティやデータベース処理に指示を出す構造です。
+
+## どのServletが「最初に」呼ばれるのか？
+明確に「最初」と言えるのは Webアプリにアクセスしたときの最初のURL によって決まります。
+たとえば、ログイン画面から始まるのであれば LoginServlet、商品作成画面からであれば CreateProductServlet です。
+この起点URLは @WebServlet(...) によってURLマッピングされ、Webサーバーが自動的にそのServletを起動します。
 
 ## MVCモデル
 - M	Model（モデル）	データやビジネスロジックの処理（データの定義・計算・DB操作など）
