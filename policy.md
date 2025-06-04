@@ -1,9 +1,7 @@
 ## コア構成の把握	Servlet ⇄ DBUtils ⇄ Connection	呼び出し順／責任分離
-  用語解説：「コア (core)」 
-  意味：英語の「core」は「中心」「核」「基盤」といった意味です。
-  - この場での使い方：
-  アプリケーション全体の処理の中心的な流れや構成のことを指します。
-  つまり、このアプリが何をするために、どのクラスや機能がどう繋がって動くのかを表すものです。
+用語解説：「コア (core)」 
+意味：英語の「core」は「中心」「核」「基盤」といった意味です。
+- この場での使い方：アプリケーション全体の処理の中心的な流れや構成のことを指します。つまり、このアプリが何をするために、どのクラスや機能がどう繋がって動くのかを表すものです。
 
 ## データ構造の把握	Product クラスなどのBean定義	データの形（値オブジェクト）
 ## 画面連携の流れ	JSP, web.xml, request.setAttribute()	Viewの動き・渡すデータ
@@ -28,21 +26,14 @@ JavaのWebアプリにおいて、リクエストを受け取り、処理を振�
 - C	Controller（コントローラー）	ユーザーの入力を受け取り、ModelやViewと連携して処理の指示を出す
 
 ## ユーザー → 「商品を登録」ボタンをクリック。この一連の流れをMVCに分けると
-  Controller（コントローラー）
-  - DoCreateProductServlet.java
-  - ブラウザからのリクエストを受け取る
-  - 入力データ（商品名・価格など）を取得し、Modelに渡す
-   -最終的に表示用のJSPへ遷移（フォワードまたはリダイレクト）
-
-2. Model（モデル）
-Product.java（Bean）
-DBUtils.java（DB操作）
-ユーザーから受け取った商品情報を使ってデータベースに保存などを行う
-
-3. View（ビュー）
-createProductView.jsp
-productListView.jsp
-HTMLとしてユーザーに出力する内容を定義
+Controller（コントローラー）:DoCreateProductServlet.java
+- ブラウザからのリクエストを受け取る
+- 入力データ（商品名・価格など）を取得し、Modelに渡す
+- 最終的に表示用のJSPへ遷移（フォワードまたはリダイレクト）
+Model（モデル）:Product.java（Bean）,DBUtils.java（DB操作）
+- ユーザーから受け取った商品情報を使ってデータベースに保存などを行う
+View（ビュー）:createProductView.jsp,productListView.jsp
+- HTMLとしてユーザーに出力する内容を定義
 
 なぜMVCに分けるのか
 - 責任分離	各部品の役割を明確にすることで、メンテナンス性が高まる
