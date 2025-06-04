@@ -15,3 +15,16 @@ package com.lanihuang.simplewebapp.servlet;このファイルの論理的な所�
 public class CreateProductServlet extends HttpServlet
 - Javaの HttpServlet を継承し、HTTPリクエストを処理できるようにする
 - HttpServlet は Java EE（Jakarta EE）における 標準的なサーブレットの親クラス
+
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+- HTTPの「GET」リクエストに応答する処理
+- RequestDispatcher を使って、画面（JSP）に処理を転送
+
+<pre>
+RequestDispatcher dispatcher = request.getServletContext()
+      .getRequestDispatcher("/WEB-INF/views/createProductView.jsp");
+dispatcher.forward(request, response);
+</pre>
+
+- /WEB-INF/views/createProductView.jsp を表示する
+- forward()：サーバー内で画面を切り替える（リダイレクトではない）
