@@ -30,8 +30,10 @@ Controller（コントローラー）:DoCreateProductServlet.java
 - ブラウザからのリクエストを受け取る
 - 入力データ（商品名・価格など）を取得し、Modelに渡す
 - 最終的に表示用のJSPへ遷移（フォワードまたはリダイレクト）
+
 Model（モデル）:Product.java（Bean）,DBUtils.java（DB操作）
 - ユーザーから受け取った商品情報を使ってデータベースに保存などを行う
+
 View（ビュー）:createProductView.jsp,productListView.jsp
 - HTMLとしてユーザーに出力する内容を定義
 
