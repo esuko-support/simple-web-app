@@ -7,6 +7,7 @@
 - 🔁 ビジネスロジック	DBUtils.insertProduct() を呼び出して登録処理
 - 📤 処理結果	成功 → 商品一覧画面へリダイレクト／失敗 → 登録画面へ戻る（エラーメッセージ付き
 
+##syntax
 <pre>
 String code = (String) request.getParameter("code");
 String name = (String) request.getParameter("name");
@@ -14,7 +15,7 @@ String priceStr = (String) request.getParameter("price");
 <pre/>
 - HTMLフォームから送られた商品コード・名前・価格を取得
 
-2型変換
+2 型変換
 <pre>
 float price = 0;
 try {
